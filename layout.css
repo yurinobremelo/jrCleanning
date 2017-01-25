@@ -36,6 +36,12 @@
     height: 300px;
 }
 
+#sequencia3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 #sequenciaimg {}
 
 .container2 {
