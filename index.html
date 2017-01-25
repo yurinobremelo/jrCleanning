@@ -1,11 +1,11 @@
+<!DOCTYPE html>
 <!-- jrCleaning -->
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css">
-
 <link rel="stylesheet" href="layout.css">
 
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -16,6 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 
 <body>
     <div class="container">
@@ -78,13 +79,101 @@
     <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-            <div class="col-md-7">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                </p>
-                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <div class="col-md-4">
+                <h4> Rooms</h4>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning">Select How Many Bedrooms</button>
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Studio Standard Clean</a></li>
+                        <li><a href="#">Studio Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One Bedroom Standard Clean</a></li>
+                        <li><a href="#">One Bedroom Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Two Bedroom Standard Clean</a></li>
+                        <li><a href="#">Two Bedroom Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Three Bedroom Standard Clean</a></li>
+                        <li><a href="#">Three Bedroom Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Four Bedroom Standard Clean</a></li>
+                        <li><a href="#">Four Bedroom Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Five Bedroom Standard Clean</a></li>
+                        <li><a href="#">Five Bedroom Deep Clean</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
+                <h4> Bathroom</h4>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning">Select How Many Bathroom</button>
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">One Bathroom Standard Clean</a></li>
+                        <li><a href="#">One Bathroom Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Two Bathroom Standard Clean</a></li>
+                        <li><a href="#">Two Bathroom Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Three Bathroom Standard Clean</a></li>
+                        <li><a href="#">Three Bathroom Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Four Bathroom Standard Clean</a></li>
+                        <li><a href="#">Four Bathroom Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Five Bathroom Standard Clean</a></li>
+                        <li><a href="#">Five Bathroom Deep Clean</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Six Bathroom Standard Clean</a></li>
+                        <li><a href="#">Six Bathroom Deep Clean</a></li>
+                    </ul>
+                </div>
+                <!--
+            <option value="one_bathroom_standard_clean">One Bathroom Standard Clean</option>
+							<option value="one_bathroom_deep_clean">One Bathroom Deep Clean</option>
+							<option value="two_bathroom_standard_clean">Two Bathroom Standard Clean</option>
+							<option value="two_bathroom_deep_clean">Two Bathroom Deep Clean</option>
+							<option value="three_bathroom_standard_clean">Three Bathroom Standard Clean</option>
+							<option value="three_bathroom_deep_clean">Three Bathroom Deep Clean</option>
+							<option value="four_bathroom_standard_clean">Four Bathroom Standard Clean</option>
+							<option value="four_bathroom_deep_clean">Four Bathroom Deep Clean</option>
+							<option value="five_bathroom_standard_clean">Five Bathroom Standard Clean</option>
+							<option value="five_bathroom_deep_clean">Five Bathroom Deep Clean</option>
+							<option value="six_bathroom_standard_clean">Six Bathroom Standard Clean</option>
+							<option value="six_bathroom_deep_clean">Six Bathroom Deep Clean</option>
+
+
+
+                <select id="bedrooms" name="bedrooms" onchange="calculateTotal(0);">
+                        <option value="studio_standard_clean">Studio Standard Clean</option>
+                        <option value="studio_deep_clean">Studio Deep Clean</option>
+                        <option value="one_bedroom_standard_clean">One Bedroom Standard Clean</option>
+                        <option value="one_bedroom_deep_clean">One Bedroom Deep Clean</option>
+                        <option value="two_bedroom_standard_clean">Two Bedroom Standard Clean</option>
+                        <option value="two_bedroom_deep_clean">Two Bedroom Deep Clean</option>
+                        <option value="three_bedroom_standard_clean">Three Bedroom Standard Clean</option>
+                        <option value="three_bedroom_deep_clean">Three Bedroom Deep Clean</option>
+                        <option value="four_bedroom_standard_clean">Four Bedroom Standard Clean</option>
+                        <option value="four_bedroom_deep_clean">Four Bedroom Deep Clean</option>
+                        <option value="five_bedroom_standard_clean">Five Bedroom Standard Clean</option>
+                        <option value="five_bedroom_deep_clean">Five Bedroom Deep Clean</option>
+						    </select>
+
+                -->
+
+            </div>
+
+
+
+            <div class="col-md-4">
                 <h2>Heading</h2>
                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                 </p>
@@ -92,6 +181,7 @@
             </div>
 
         </div>
+
 
         <div class="row">
             <div class="col-md-7">
