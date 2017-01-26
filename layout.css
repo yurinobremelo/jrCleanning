@@ -9,16 +9,9 @@
     margin-top: 10px;
 }
 
-.nav-brand-custom {
-    color: mediumturquoise;
-}
-
-.header-cont container {
-    margin-left: 0px;
-    width: 90%;
-    height: 30px;
-    margin-top: 7px;
-    position: absolute;
+#brand {
+    color: seagreen;
+    font-size: 36px;
 }
 
 #sequencia {
@@ -45,23 +38,6 @@
     font-weight: bold;
 }
 
-#sequenciaimg {}
-
 .container {
     padding-top: 20px;
-}
-
-.container2 h1 {
-    padding: 200px;
-    position: relative;
-    z-index: 2;
-}
-
-.container2 img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.6;
 }
