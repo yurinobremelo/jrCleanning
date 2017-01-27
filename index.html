@@ -5,6 +5,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css">
 <link rel="stylesheet" href="layout.css">
 
+<script type="text/javascript" src="/bower_components/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
+<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
 
 <html lang="en">
 
@@ -19,7 +26,7 @@
 
 
 <body>
-    <div class="container">
+    <div class="container container-custom">
         <nav class="navbar navbar-custom">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -67,18 +74,14 @@
 
         </div>
     </div>
-
-
-
-
     <div class="container">
         <!-- Example row of columns -->
-        <div class="row">
-            <div class="col-md-3">
+        <div class="row justify-content-between">
+            <div class="col-md-4">
                 <h4> Rooms</h4>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-warning">Select How Many Bedrooms</button>
-                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn btn-success">Select How Many Bedrooms</button>
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     <span class="caret"></span>
                     <span class="sr-only">Toggle Dropdown</span>
                     </button>
@@ -103,11 +106,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h4>&nbsp</h4>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-warning">Select How Many Bathroom</button>
-                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn btn-success">Select How Many Bathroom</button>
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                     <span class="caret"></span>
                                     <span class="sr-only">Toggle Dropdown</span>
                                     </button>
@@ -131,105 +134,144 @@
                         <li><a href="#">Six Bathroom Deep Clean</a></li>
                     </ul>
                 </div>
-                <!--
-            <option value="one_bathroom_standard_clean">One Bathroom Standard Clean</option>
-							<option value="one_bathroom_deep_clean">One Bathroom Deep Clean</option>
-							<option value="two_bathroom_standard_clean">Two Bathroom Standard Clean</option>
-							<option value="two_bathroom_deep_clean">Two Bathroom Deep Clean</option>
-							<option value="three_bathroom_standard_clean">Three Bathroom Standard Clean</option>
-							<option value="three_bathroom_deep_clean">Three Bathroom Deep Clean</option>
-							<option value="four_bathroom_standard_clean">Four Bathroom Standard Clean</option>
-							<option value="four_bathroom_deep_clean">Four Bathroom Deep Clean</option>
-							<option value="five_bathroom_standard_clean">Five Bathroom Standard Clean</option>
-							<option value="five_bathroom_deep_clean">Five Bathroom Deep Clean</option>
-							<option value="six_bathroom_standard_clean">Six Bathroom Standard Clean</option>
-							<option value="six_bathroom_deep_clean">Six Bathroom Deep Clean</option>
-
-
-
-                <select id="bedrooms" name="bedrooms" onchange="calculateTotal(0);">
-                        <option value="studio_standard_clean">Studio Standard Clean</option>
-                        <option value="studio_deep_clean">Studio Deep Clean</option>
-                        <option value="one_bedroom_standard_clean">One Bedroom Standard Clean</option>
-                        <option value="one_bedroom_deep_clean">One Bedroom Deep Clean</option>
-                        <option value="two_bedroom_standard_clean">Two Bedroom Standard Clean</option>
-                        <option value="two_bedroom_deep_clean">Two Bedroom Deep Clean</option>
-                        <option value="three_bedroom_standard_clean">Three Bedroom Standard Clean</option>
-                        <option value="three_bedroom_deep_clean">Three Bedroom Deep Clean</option>
-                        <option value="four_bedroom_standard_clean">Four Bedroom Standard Clean</option>
-                        <option value="four_bedroom_deep_clean">Four Bedroom Deep Clean</option>
-                        <option value="five_bedroom_standard_clean">Five Bedroom Standard Clean</option>
-                        <option value="five_bedroom_deep_clean">Five Bedroom Deep Clean</option>
-						    </select>
-
-                -->
 
             </div>
-
-
-
-            <div class="col-xs-6">
+            <div class="col-md-4 offset-md-4 col-xs-6">
                 <h4>Do you have pets?</h4>
-                <div class="col-md-3 col-xs-6">
+                <div class="col-md-4 offset-md-4 col-xs-6">
                     <img id="imgDog" class="img" src="img/Dog-80.png" alt="Dog" width="70px " height="70px ">
+                    <p id="imgDogPreco">&nbsp</p>
                 </div>
-                <div class="col-md-3 col-xs-6">
-
+                <div class="col-md-4 offset-md-4 col-xs-6">
                     <img class="img" id="imgCat" src="img/Cat-80.png" alt="Cat" width="70px " height="70px ">
+                    <p id="imgCatPreco">&nbsp</p>
                 </div>
-
-
             </div>
 
         </div>
 
-        <div class="row ">
-            <div class="col-xs-12 ">
+
+
+        <div class="row no-gutters">
+            <div class="col-md-8 col-xs-12">
                 <h4>Add extra tasks to your cleaning (adds extra time to your booking) </h4>
+                <div class="col-md-2 col-xs-3">
+                    <img class="img" id="imgSliding" src="img/Sliding-96.png" alt="Sliding" width="70px" height="70px">
+                    <p id="imgSlidingPreco">&nbsp</p>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <img class="img" id="imgWashing" src="img/Washing-80.png" alt="Washing" width="70px" height="70px">
+                    <p id="imgWashingPreco">&nbsp</p>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <img class="img" id="imgIron" src="img/Iron-96.png" alt="Iron" width="70px" height="70px">
+                    <p id="imgIronPreco">&nbsp</p>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <img class="img" id="imgWindow" src="img/Window-96.png" alt="Window" width="70px" height="70px">
+                    <p id="imgWindowPreco">&nbsp</p>
+
+                </div>
+
+                <div class="col-md-2 col-xs-3">
+                    <img class="img" id="imgFridge" src="img/Fridge-96.png" alt="Fridge" width="70px" height="70px">
+                    <p id="imgFridgePreco">&nbsp</p>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <img class="img" id="imgToaster" src="img/Toaster-80.png" alt="Toaster" width="70px" height="70px">
+                    <p id="imgToasterPreco">&nbsp</p>
+                </div>
+                <div class="col-md-2 col-xs-3">
+                    <img class="img" id="imgBalcony" src="img/Balcony-80.png" alt="Balcony" width="70px" height="70px">
+                    <p id="imgBalconyPreco">&nbsp</p>
+                </div>
+
+
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <h4>How should the cleaner get in? </h4>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success">Select</button>
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">I Will Be Home</a></li>
+
+                        <li class="divider"></li>
+                        <li><a href="#">I Will Leave The Key</a></li>
+
+                        <li class="divider"></li>
+                        <li><a href="#">Other</a></li>
+
+
+                    </ul>
+                </div>
+
+
+
+
+
             </div>
         </div>
 
-        <div class="row ">
-            <div class="col-xs-12">
-
-                <div class="col-md-1 col-xs-3">
-                    <img class="img-responsive " id="imgSliding" src="img/Sliding-96.png" alt="Sliding" width="70px" height="70px">
-
-                </div>
-                <div class="col-md-1 col-xs-3">
-
-                    <img class="img-responsive " id="imgWashing" src="img/Washing-80.png" alt="Washing" width="70px" height="70px">
-                </div>
-                <div class="col-md-1 col-xs-3">
-                    <img class="img-responsive " id="imgIron" src="img/Iron-96.png" alt="Iron" width="70px" height="70px">
-
-                </div>
-                <div class="col-md-1 col-xs-3">
-
-                    <img class="img-responsive " id="imgWindow" src="img/Window-96.png" alt="Window" width="70px" height="70px">
-                </div>
+        <!--row -->
+        <div class="row">
+            <div class="col-md-8 col-xs-12">
+                <p id="recommend">We recommend 2 hours clean based on our experience.</p>
 
 
-
-                <div class="col-md-1 col-xs-3">
-                    <img class="img-responsive " id="imgFridge" src="img/Fridge-96.png" alt="Fridge" width="70px" height="70px">
-
-                </div>
-                <div class="col-md-1  col-xs-3">
-
-                    <img class="img-responsive " id="imgToaster" src="img/Toaster-80.png" alt="Toaster" width="70px" height="70px">
-                </div>
-                <div class="col-md-1 col-xs-3">
-                    <img class="img-responsive " id="imgBalcony" src="img/Balcony-80.png" alt="Balcony" width="70px" height="70px">
-
-                </div>
-                <div class="col-md-1 col-xs-3">
-
-                </div>
 
             </div>
+            <div class="col-md-4 col-xs-12">
+                <h4>Instructions for cleaner</h4>
+                <input type="text" class="form-control" id="Instructions">
+            </div>
+
+
 
         </div>
+        <!--row-->
+        <!--row -->
+        <div class="row">
+            <div class="col-md-8 col-xs-12">
+                <h4>Cleaning Supplies?</h4>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success ">I Will Provide</button>
+                    <button type="button" class="btn btn-success active">Cleanner Will Provide</button>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                <h4> Schedule Date and Time</h4>
+                <div style="overflow:hidden;">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="datetimepicker12"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function() {
+                            $('#datetimepicker12').datetimepicker({
+                                inline: true,
+                                sideBySide: true
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--row-->
+
+
+
 
     </div>
     <div class="container footer ">
@@ -260,11 +302,14 @@
 
 <script>
     $(document).ready(function() {
+        var preco = "+1hour/$35"
         $("#imgDog").click(function() {
             if ($("#imgDog").attr("src") == 'img/Dog-80.png') {
                 $("#imgDog").attr('src', 'img/Dog-80C.png');
+                // $("#imgDogPreco").html("preço")
             } else {
                 $("#imgDog").attr('src', 'img/Dog-80.png');
+                // $("#imgDogPreco").html("&nbsp")
             }
 
         });
@@ -272,8 +317,10 @@
         $("#imgCat").click(function() {
             if ($("#imgCat").attr("src") == 'img/Cat-80.png') {
                 $("#imgCat").attr('src', 'img/Cat-80C.png');
+                // $("#imgCatPreco").html("preço")
             } else {
                 $("#imgCat").attr('src', 'img/Cat-80.png');
+                //$("#imgCatPreco").html("&nbsp")
             }
 
         });
@@ -281,8 +328,10 @@
         $("#imgSliding").click(function() {
             if ($("#imgSliding").attr("src") == 'img/Sliding-96.png') {
                 $("#imgSliding").attr('src', 'img/Sliding-96C.png');
+                $("#imgSlidingPreco").html(preco)
             } else {
                 $("#imgSliding").attr('src', 'img/Sliding-96.png');
+                $("#imgSlidingPreco").html("&nbsp")
             }
 
         });
@@ -290,8 +339,10 @@
         $("#imgWashing").click(function() {
             if ($("#imgWashing").attr("src") == 'img/Washing-80.png') {
                 $("#imgWashing").attr('src', 'img/Washing-80C.png');
+                $("#imgWashingPreco").html(preco)
             } else {
                 $("#imgWashing").attr('src', 'img/Washing-80.png');
+                $("#imgWashingPreco").html("&nbsp")
             }
 
         });
@@ -299,8 +350,10 @@
         $("#imgIron").click(function() {
             if ($("#imgIron").attr("src") == 'img/Iron-96.png') {
                 $("#imgIron").attr('src', 'img/Iron-96C.png');
+                $("#imgIronPreco").html(preco)
             } else {
                 $("#imgIron").attr('src', 'img/Iron-96.png');
+                $("#imgIronPreco").html("&nbsp")
             }
 
         });
@@ -308,8 +361,10 @@
         $("#imgWindow").click(function() {
             if ($("#imgWindow").attr("src") == 'img/Window-96.png') {
                 $("#imgWindow").attr('src', 'img/Window-96C.png');
+                $("#imgWindowPreco").html(preco)
             } else {
                 $("#imgWindow").attr('src', 'img/Window-96.png');
+                $("#imgWindowPreco").html("&nbsp")
             }
 
         });
@@ -317,8 +372,10 @@
         $("#imgFridge").click(function() {
             if ($("#imgFridge").attr("src") == 'img/Fridge-96.png') {
                 $("#imgFridge").attr('src', 'img/Fridge-96C.png');
+                $("#imgFridgePreco").html(preco)
             } else {
                 $("#imgFridge").attr('src', 'img/Fridge-96.png');
+                $("#imgFridgePreco").html("&nbsp")
             }
 
         });
@@ -327,16 +384,20 @@
 
             if ($("#imgToaster").attr("src") == 'img/Toaster-80.png') {
                 $("#imgToaster").attr('src', 'img/Toaster-80C.png');
+                $("#imgToasterPreco").html(preco)
             } else {
                 $("#imgToaster").attr('src', 'img/Toaster-80.png');
+                $("#imgToasterPreco").html("&nbsp")
             }
 
         });
         $("#imgBalcony").click(function() {
             if ($("#imgBalcony").attr("src") == 'img/Balcony-80.png') {
                 $("#imgBalcony").attr('src', 'img/Balcony-80C.png');
+                $("#imgBalconyPreco").html(preco)
             } else {
                 $("#imgBalcony").attr('src', 'img/Balcony-80.png');
+                $("#imgBalconyPreco").html("&nbsp")
             }
 
         });
