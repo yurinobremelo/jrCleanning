@@ -3,14 +3,11 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css">
-<link rel="stylesheet" href="layout.css">
+<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
-<script type="text/javascript" src="/bower_components/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
-<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
+<link rel="stylesheet" href="layout.css">
 
 
 <html lang="en">
@@ -236,6 +233,7 @@
         <!--row-->
         <!--row -->
         <div class="row">
+            <hr> </hr>
             <div class="col-md-8 col-xs-12">
                 <h4>Cleaning Supplies?</h4>
                 <div class="btn-group">
@@ -243,25 +241,21 @@
                     <button type="button" class="btn btn-success active">Cleanner Will Provide</button>
 
                 </div>
+
+
+
             </div>
             <div class="col-md-4 col-xs-12">
-                <h4> Schedule Date and Time</h4>
-                <div style="overflow:hidden;">
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div id="datetimepicker12"></div>
-                            </div>
-                        </div>
+
+                <div class="form-group">
+                    <h4> Schedule Date and Time</h4>
+
+                    <div class="input-group date form_datetime" data-date="2017-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                        <input class="form-control" size="16" type="text" value="" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                     </div>
-                    <script type="text/javascript">
-                        $(function() {
-                            $('#datetimepicker12').datetimepicker({
-                                inline: true,
-                                sideBySide: true
-                            });
-                        });
-                    </script>
+                    <input type="hidden" id="dtp_input1" value="" /><br/>
                 </div>
             </div>
 
@@ -406,5 +400,48 @@
 
 
 
+    }); <
+    script type = "text/javascript"
+    src = "./jquery/jquery-1.8.3.min.js"
+    charset = "UTF-8" >
+</script>
+<script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        language: 'us',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
     });
+    $('.form_date').datetimepicker({
+        language: 'us',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        language: 'us',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
+
+
 </script>
